@@ -18,5 +18,6 @@ class UserModel extends Model
         'last_name',
         'email',
         'role',
+        'avatar',
     ];
 }

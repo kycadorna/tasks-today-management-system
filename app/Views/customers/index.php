@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Accounts</title>
-    <link rel="stylesheet" href="<?= base_url('public/css/style.css') ?>">
 </head>
 <body>
-    <div class="container">
-    <h1>Customer Accounts</h1>
     <h1>Customer Accounts</h1>
 
     <nav>
-        <a href="<?= site_url('/') ?>">Home</a>
+        <a href="<?= site_url('/') ?>">Home</a> |
+        <a href="<?= site_url('customers/new') ?>">Add New Customer</a> |
         <a href="<?= site_url('users') ?>">User Accounts</a>
     </nav>
+
+    <?php if (session('success')): ?>
+        <p style="color: green;"><?= esc(session('success')) ?></p>
+    <?php endif; ?>
+
     <table border="1" cellpadding="10">
         <thead>
             <tr>
@@ -24,9 +26,9 @@
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Address</th>
+                <th>Action</th>
             </tr>
         </thead>
-
         <tbody>
             <?php foreach ($customers as $customer): ?>
                 <tr>
@@ -36,10 +38,14 @@
                     <td><?= esc($customer['email']) ?></td>
                     <td><?= esc($customer['phone']) ?></td>
                     <td><?= esc($customer['address']) ?></td>
+                    <td>
+                        <a href="<?= site_url('customers/' . $customer['customer_id'] . '/edit') ?>">
+                            Edit
+                        </a>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
-    </div>
 </body>
 </html>
