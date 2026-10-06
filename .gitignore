@@ -3,3 +3,7 @@ writable/cache/*
 writable/logs/*
 writable/session/*
 !.gitkeep
+writable/debugbar/*.json
+writable/cache/*
+writable/logs/*
+writable/session/*

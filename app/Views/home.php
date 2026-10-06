@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>POS System</title>
-
-    <link rel="stylesheet" href="<?= base_url('public/css/style.css') ?>">
+    <title>Tasks for Today</title>
 </head>
 <body>
+    <h1>Tasks for Today Management System</h1>
 
-    <div class="container">
-        <h1>POS Account Management System</h1>
+    <p>Welcome! Select a page below.</p>
 
-        <p>Welcome! Select an account page below.</p>
+    <p>
+        <a href="<?= site_url('tasks') ?>">Task List</a>
+    </p>
 
-        <nav>
-            <a href="<?= site_url('customers') ?>">Customer Accounts</a>
-            <a href="<?= site_url('users') ?>">User Accounts</a>
-        </nav>
-    </div>
+    <p>
+        <a href="<?= site_url('profile') ?>">Profile</a>
+    </p>
 
+    <p>
+        <a href="<?= site_url('about') ?>">About</a>
+    </p>
+
+    <?php if (session()->get('isLoggedIn')): ?>
+        <p>
+            <a href="<?= site_url('logout') ?>">Logout</a>
+        </p>
+    <?php else: ?>
+        <p>
+            <a href="<?= site_url('login') ?>">Login</a>
+        </p>
+    <?php endif; ?>
 </body>
 </html>

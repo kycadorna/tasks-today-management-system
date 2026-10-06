@@ -59,3 +59,37 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - json (enabled by default - don't turn it off)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+
+
+
+# Tasks for Today Management System
+
+A task management system built with CodeIgniter 4.
+
+## Features
+
+- User login and logout
+- Password hashing
+- Task listing
+- Create task
+- Edit task
+- Update task
+- Soft delete using archived status
+- Form validation
+- Authentication filter
+- Public Home, Task List, Profile, and About pages
+
+## Requirements
+
+- PHP 8.2 or higher
+- MySQL
+- XAMPP
+- CodeIgniter 4
+- Composer
+
+## Installation
+
+Clone or copy the project into the XAMPP htdocs folder.
+
+```text
+D:\Xammp\htdocs\pos-tfa3
